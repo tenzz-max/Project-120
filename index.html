@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="main.js"></script>
+
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h2 style="color: blue;">Case Study:</h2>
+            <span>
+                <img style="width: 500px;" src="google-lens.jpeg"> <h1 style="color: red;">VS</h1> <button class="btn btn-primary"><h1>MoibleNet</h1></button>
+            </span>
+
+                <ol class="images"> 
+
+                    <li>
+                        <div class="img_1">
+                            <h4><b>Test Image - </b></h4>
+                            <img src="airpods.png">
+<br>
+                            <span class="col-sm-4 col-xs-12 google lens">
+                                <p style="font-size: 21;"> Result On Google lens: </p>
+                                <b class="result"></b>
+                            </span>
+
+                            <span class=" col-sm-4 col-xs-12 MobileNet">
+                                <p style="font-size: 21;">Results On MobileNet: </p>
+                                <b class="result"></b>
+                            </span>
+                        </div>
+                    </li>
+<br>
+                    <li>
+                        <div class="img_1">
+                            <h4><b>Test Image - </b></h4>
+                            <img src="glue_stick.png">
+<br>
+                            <span class="col-sm-4 col-xs-12 google lens">
+                                <p style="font-size: 21;"> Result On Google lens: </p>
+                                <b class="result"></b>
+                            </span>
+
+                            <span class=" col-sm-4 col-xs-12 MobileNet">
+                                <p style="font-size: 21;">Results On MobileNet: </p>
+                                <b class="result"></b>
+                            </span>
+                        </div>
+                    </li>
+<br>                    
+                    <li>
+                        <div class="img_1">
+                            <h4><b>Test Image - </b></h4>
+                            <img src="orange.png">
+<br>
+                            <span class="col-sm-4 col-xs-12 google lens">
+                                <p style="font-size: 21;"> Result On Google lens: </p>
+                                <b class="result"></b>
+                            </span>
+
+                            <span class=" col-sm-4 col-xs-12 MobileNet">
+                                <p style="font-size: 21;">Results On MobileNet: </p>
+                                <b class="result"></b>
+                            </span>
+                        </div>
+                    </li>
+<br>                    
+                    <li>
+                        <div class="img_1">
+                            <h4><b>Test Image - </b></h4>
+                            <img src="pen.png">
+                            <br>
+                            <span class="col-sm-4 col-xs-12 google lens">
+                                <p style="font-size: 21;"> Result On Google lens: </p>
+                                <b class="result"></b>
+                            </span>
+
+                            <span class=" col-sm-4 col-xs-12 MobileNet">
+                                <p style="font-size: 21;">Results On MobileNet: </p>
+                                <b class="result"></b>
+                            </span>
+                        </div>
+                    </li>
+<br>                    
+                    <li>
+                        <div class="img_1">
+                            <h4><b>Test Image - </b></h4>
+                            <img src="pencil.png">
+                            <br>
+                            <span class="col-sm-4 col-xs-12 google lens">
+                                <p style="font-size: 21;"> Result On Google lens: </p>
+                                <b class="result"></b>
+                            </span>
+
+                            <span class=" col-sm-4 col-xs-12 MobileNet">
+                                <p style="font-size: 21;">Results On MobileNet: </p>
+                                <b class="result"></b>
+                            </span>
+                        </div>
+                    </li>
+<br>                    
+                    <li>
+                        <div class="img_1">
+                            <h4><b>Test Image - </b></h4>
+                            <img src="purell_hand_sanitaizer.png">
+                            <br>
+                            <span class="col-sm-4 col-xs-12 google lens">
+                                <p style="font-size: 21;"> Result On Google lens: </p>
+                                <b class="result"></b>
+                            </span>
+
+                            <span class=" col-sm-4 col-xs-12 MobileNet">
+                                <p style="font-size: 21;">Results On MobileNet: </p>
+                                <b class="result"></b>
+                            </span>
+                        </div>
+                    </li>
+<br>                    
+                    <li>
+                        <div class="img_1">
+                            <h4><b>Test Image - </b></h4>
+                            <img src="sissors.png">
+                            <br>
+                            <span class="col-sm-4 col-xs-12 google lens">
+                                <p style="font-size: 21;"> Result On Google lens: </p>
+                                <b class="result"></b>
+                            </span>
+                            <br>
+                            <span class=" col-sm-4 col-xs-12 MobileNet">
+                                <p style="font-size: 21;">Results On MobileNet: </p>
+                                <b class="result"></b>
+                            </span>
+                        </div>
+                    </li>
+<br>                    
+                    <li>
+                        <div class="img_1">
+                            <h4><b>Test Image - </b></h4>
+                            <img src="spoon.png">
+                            <br>
+                            <span class="col-sm-4 col-xs-12 google lens">
+                                <p style="font-size: 21;"> Result On Google lens: </p>
+                                <b class="result"></b>
+                            </span>
+                            <br>
+                            <span class=" col-sm-4 col-xs-12 MobileNet">
+                                <p style="font-size: 21;">Results On MobileNet: </p>
+                                <b class="result"></b>
+                            </span>
+                        </div>
+                    </li>
+<br>                    
+                    <li>
+                        <div class="img_1">
+                            <h4><b>Test Image - </b></h4>
+                            <img src="tissue_paper.png">
+                            <br>
+                            <span class="col-sm-4 col-xs-12 google lens">
+                                <p style="font-size: 21;"> Result On Google lens: </p>
+                                <b class="result"></b>
+                            </span>
+
+                            <span class=" col-sm-4 col-xs-12 MobileNet">
+                                <p style="font-size: 21;">Results On MobileNet: </p>
+                                <b class="result"></b>
+                            </span>
+                        </div>
+                    </li>
+<br>                    
+                    <li>
+                        <div class="img_1">
+                            <h4><b>Test Image - </b></h4>
+                            <img src="water_bottle.png">
+                            <br>
+                            <span class="col-sm-4 col-xs-12 google lens">
+                                <p style="font-size: 21;"> Result On Google lens: </p>
+                                <b class="result"></b>
+                            </span>
+                            <br>
+                            <span class=" col-sm-4 col-xs-12 MobileNet">
+                                <p style="font-size: 21;">Results On MobileNet: </p>
+                                <b class="result"></b>
+                            </span>
+                        </div>
+                    </li>
+                </ol>
+        </div>
+    </center>
+</body>
+</html>
+
